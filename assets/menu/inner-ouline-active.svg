@@ -1,0 +1,18 @@
+<svg class="outline" style="overflow: visible;" width="36" height="36" viewBox="0 0 36 36" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(18 18)">
+        <circle class="outline__outline" r="18" stroke="#454545" fill="none" />
+        <circle class="outline__outline__glow" r="18" stroke="#454545" fill="none" />
+        <!-- <circle class="outline__circle" cy="-17.5" r="3.5" fill="#454545" transform="rotate(0)">
+            <animateTransform
+                attributeName="transform" attributeType="XML"
+                type="rotate" from="0" to="360" dur="5s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle class="outline__circle__glow" cy="-17.5" r="3.5" fill="#454545" transform="rotate(0)">
+            <animateTransform
+                attributeName="transform" attributeType="XML"
+                type="rotate" from="0" to="360" dur="5s"
+                repeatCount="indefinite" />
+        </circle> -->
+    </g>
+</svg>

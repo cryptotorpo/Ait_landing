@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./favicon-16x16.png"
+        />
+        <link rel="manifest" href="./site.webmanifest" />
+        <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:image" content="/public/meta.png" />
+        <title>AIT Protocol</title>
+
+        <meta
+            content="AIT Protocol, valued at over $50M, has 100,000+ connected wallets to its dapp. Specializing in data annotation tools through Web3 Innovation, our mission is to seamlessly integrate AI across industries for efficiency and innovation."
+        />
+        <meta property="og:title" content="AIT Protocol" />
+        <meta
+            property="og:description"
+            content="AIT Protocol, valued at over $50M, has 100,000+ connected wallets to its dapp. Specializing in data annotation tools through Web3 Innovation, our mission is to seamlessly integrate AI across industries for efficiency and innovation."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://ait-protocol.xyz/meta.png" />
+        <meta property="og:url" content="https://ait-protocol.xyz/" />
+        <meta name="twitter:url" content="https://ait-protocol.xyz/" />
+        <meta name="twitter:title" content="AIT Protocol" />
+        <meta
+            name="twitter:description"
+            content="AIT Protocol, valued at over $50M, has 100,000+ connected wallets to its dapp. Specializing in data annotation tools through Web3 Innovation, our mission is to seamlessly integrate AI across industries for efficiency and innovation."
+        />
+        <meta name="twitter:image" content="https://ait-protocol.xyz/meta.png" />
+
+        <style>
+            body,
+            html,
+            #root {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden !important;
+            }
+            #defs-svg {
+                position: fixed;
+                z-index: -1;
+            }
+
+            body {
+                background-color: #000;
+            }
+            .siteLoading {
+                overflow: hidden;
+                position: fixed;
+                z-index: 2;
+                width: 200px;
+                text-align: center;
+                font-family: Neusa, Arial, Helvetica, sans-serif;
+                color: #fff;
+                top: 38%;
+                left: 50%;
+                transform: translate(-50%, -38%);
+                pointer-events: none;
+            }
+            .siteLoading h2 {
+                text-align: center;
+                overflow: hidden;
+                width: 100%;
+                font-size: 20px;
+                font-weight: bold;
+                height: 72px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 2px;
+            }
+            .siteLoading h2 span {
+                letter-spacing: 4.8px;
+                margin-right: -2px;
+            }
+            .siteLoading__loading {
+                transform: translate(0) rotate(0);
+                margin-bottom: 0.2rem;
+            }
+
+            .siteLoading:not(.loaded) .siteLoading__loading {
+                animation-delay: 0s;
+                animation-direction: normal;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                animation-name: rotateWipeUpIn;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                transform: translateY(160%) rotate(10deg);
+                position: relative;
+            }
+
+            .siteLoading:not(.loaded) .siteLoading__loading:after {
+                content: ' .';
+                animation: dots 1s steps(5, end) infinite;
+                position: absolute;
+                left: 140px;
+            }
+
+            .siteLoading__completed {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform: translateY(151%);
+            }
+
+            @keyframes rotateWipeUpIn {
+                to {
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes dots {
+                0%,
+                20% {
+                    color: rgba(0, 0, 0, 0);
+                    text-shadow:
+                        0.25em 0 0 rgba(0, 0, 0, 0),
+                        0.5em 0 0 rgba(0, 0, 0, 0);
+                }
+                40% {
+                    color: white;
+                    text-shadow:
+                        0.25em 0 0 rgba(0, 0, 0, 0),
+                        0.5em 0 0 rgba(0, 0, 0, 0);
+                }
+                60% {
+                    text-shadow:
+                        0.25em 0 0 white,
+                        0.5em 0 0 rgba(0, 0, 0, 0);
+                }
+                80%,
+                100% {
+                    text-shadow:
+                        0.25em 0 0 white,
+                        0.5em 0 0 white;
+                }
+            }
+        
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4Lmh0bWwlM0ZodG1sLXByb3h5JmlubGluZS1jc3MmaW5kZXg9MC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtZQUNZOzs7Z0JBR0ksU0FBUztnQkFDVCxVQUFVO2dCQUNWLFdBQVc7Z0JBQ1gsWUFBWTtnQkFDWiwyQkFBMkI7WUFDL0I7WUFDQTtnQkFDSSxlQUFlO2dCQUNmLFdBQVc7WUFDZjs7WUFFQTtnQkFDSSxzQkFBc0I7WUFDMUI7WUFDQTtnQkFDSSxnQkFBZ0I7Z0JBQ2hCLGVBQWU7Z0JBQ2YsVUFBVTtnQkFDVixZQUFZO2dCQUNaLGtCQUFrQjtnQkFDbEIsZ0RBQWdEO2dCQUNoRCxXQUFXO2dCQUNYLFFBQVE7Z0JBQ1IsU0FBUztnQkFDVCxnQ0FBZ0M7Z0JBQ2hDLG9CQUFvQjtZQUN4QjtZQUNBO2dCQUNJLGtCQUFrQjtnQkFDbEIsZ0JBQWdCO2dCQUNoQixXQUFXO2dCQUNYLGVBQWU7Z0JBQ2YsaUJBQWlCO2dCQUNqQixZQUFZO2dCQUNaLGFBQWE7Z0JBQ2Isc0JBQXNCO2dCQUN0QixtQkFBbUI7Z0JBQ25CLHVCQUF1QjtnQkFDdkIsbUJBQW1CO1lBQ3ZCO1lBQ0E7Z0JBQ0kscUJBQXFCO2dCQUNyQixrQkFBa0I7WUFDdEI7WUFDQTtnQkFDSSxpQ0FBaUM7Z0JBQ2pDLHFCQUFxQjtZQUN6Qjs7WUFFQTtnQkFDSSxtQkFBbUI7Z0JBQ25CLDJCQUEyQjtnQkFDM0Isc0JBQXNCO2dCQUN0Qiw2QkFBNkI7Z0JBQzdCLDhCQUE4QjtnQkFDOUIseURBQXlEO2dCQUN6RCx5Q0FBeUM7Z0JBQ3pDLGtCQUFrQjtZQUN0Qjs7WUFFQTtnQkFDSSxhQUFhO2dCQUNiLHlDQUF5QztnQkFDekMsa0JBQWtCO2dCQUNsQixXQUFXO1lBQ2Y7O1lBRUE7Z0JBQ0ksa0JBQWtCO2dCQUNsQixTQUFTO2dCQUNULE9BQU87Z0JBQ1AsMkJBQTJCO1lBQy9COztZQUVBO2dCQUNJO29CQUNJLHdCQUF3QjtnQkFDNUI7WUFDSjs7WUFFQTtnQkFDSTs7b0JBRUksdUJBQXVCO29CQUN2Qjs7a0RBRThCO2dCQUNsQztnQkFDQTtvQkFDSSxZQUFZO29CQUNaOztrREFFOEI7Z0JBQ2xDO2dCQUNBO29CQUNJOztrREFFOEI7Z0JBQ2xDO2dCQUNBOztvQkFFSTs7dUNBRW1CO2dCQUN2QjtZQUNKIiwiZmlsZSI6ImluZGV4Lmh0bWw/aHRtbC1wcm94eSZpbmxpbmUtY3NzJmluZGV4PTAuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4gICAgICAgICAgICBib2R5LFxuICAgICAgICAgICAgaHRtbCxcbiAgICAgICAgICAgICNyb290IHtcbiAgICAgICAgICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgICAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgICAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbiAhaW1wb3J0YW50O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgI2RlZnMtc3ZnIHtcbiAgICAgICAgICAgICAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgICAgICAgICAgICAgei1pbmRleDogLTE7XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIGJvZHkge1xuICAgICAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICMwMDA7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAuc2l0ZUxvYWRpbmcge1xuICAgICAgICAgICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgICAgICAgICAgcG9zaXRpb246IGZpeGVkO1xuICAgICAgICAgICAgICAgIHotaW5kZXg6IDI7XG4gICAgICAgICAgICAgICAgd2lkdGg6IDIwMHB4O1xuICAgICAgICAgICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgICAgICAgICAgICBmb250LWZhbWlseTogTmV1c2EsIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7XG4gICAgICAgICAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgICAgICAgICAgdG9wOiAzOCU7XG4gICAgICAgICAgICAgICAgbGVmdDogNTAlO1xuICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC0zOCUpO1xuICAgICAgICAgICAgICAgIHBvaW50ZXItZXZlbnRzOiBub25lO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgLnNpdGVMb2FkaW5nIGgyIHtcbiAgICAgICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgICAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgICAgICBmb250LXNpemU6IDIwcHg7XG4gICAgICAgICAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiA3MnB4O1xuICAgICAgICAgICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgICAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICAgICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICAgICAgICAgIGxldHRlci1zcGFjaW5nOiAycHg7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAuc2l0ZUxvYWRpbmcgaDIgc3BhbiB7XG4gICAgICAgICAgICAgICAgbGV0dGVyLXNwYWNpbmc6IDQuOHB4O1xuICAgICAgICAgICAgICAgIG1hcmdpbi1yaWdodDogLTJweDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5zaXRlTG9hZGluZ19fbG9hZGluZyB7XG4gICAgICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoMCkgcm90YXRlKDApO1xuICAgICAgICAgICAgICAgIG1hcmdpbi1ib3R0b206IDAuMnJlbTtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLnNpdGVMb2FkaW5nOm5vdCgubG9hZGVkKSAuc2l0ZUxvYWRpbmdfX2xvYWRpbmcge1xuICAgICAgICAgICAgICAgIGFuaW1hdGlvbi1kZWxheTogMHM7XG4gICAgICAgICAgICAgICAgYW5pbWF0aW9uLWRpcmVjdGlvbjogbm9ybWFsO1xuICAgICAgICAgICAgICAgIGFuaW1hdGlvbi1kdXJhdGlvbjogMnM7XG4gICAgICAgICAgICAgICAgYW5pbWF0aW9uLWZpbGwtbW9kZTogZm9yd2FyZHM7XG4gICAgICAgICAgICAgICAgYW5pbWF0aW9uLW5hbWU6IHJvdGF0ZVdpcGVVcEluO1xuICAgICAgICAgICAgICAgIGFuaW1hdGlvbi10aW1pbmctZnVuY3Rpb246IGN1YmljLWJlemllcigwLjc2LCAwLCAwLjI0LCAxKTtcbiAgICAgICAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMTYwJSkgcm90YXRlKDEwZGVnKTtcbiAgICAgICAgICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIC5zaXRlTG9hZGluZzpub3QoLmxvYWRlZCkgLnNpdGVMb2FkaW5nX19sb2FkaW5nOmFmdGVyIHtcbiAgICAgICAgICAgICAgICBjb250ZW50OiAnIC4nO1xuICAgICAgICAgICAgICAgIGFuaW1hdGlvbjogZG90cyAxcyBzdGVwcyg1LCBlbmQpIGluZmluaXRlO1xuICAgICAgICAgICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgICAgICAgICBsZWZ0OiAxNDBweDtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLnNpdGVMb2FkaW5nX19jb21wbGV0ZWQge1xuICAgICAgICAgICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgICAgICAgICBib3R0b206IDA7XG4gICAgICAgICAgICAgICAgbGVmdDogMDtcbiAgICAgICAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMTUxJSk7XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIEBrZXlmcmFtZXMgcm90YXRlV2lwZVVwSW4ge1xuICAgICAgICAgICAgICAgIHRvIHtcbiAgICAgICAgICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDApO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgQGtleWZyYW1lcyBkb3RzIHtcbiAgICAgICAgICAgICAgICAwJSxcbiAgICAgICAgICAgICAgICAyMCUge1xuICAgICAgICAgICAgICAgICAgICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwKTtcbiAgICAgICAgICAgICAgICAgICAgdGV4dC1zaGFkb3c6XG4gICAgICAgICAgICAgICAgICAgICAgICAwLjI1ZW0gMCAwIHJnYmEoMCwgMCwgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAwLjVlbSAwIDAgcmdiYSgwLCAwLCAwLCAwKTtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgNDAlIHtcbiAgICAgICAgICAgICAgICAgICAgY29sb3I6IHdoaXRlO1xuICAgICAgICAgICAgICAgICAgICB0ZXh0LXNoYWRvdzpcbiAgICAgICAgICAgICAgICAgICAgICAgIDAuMjVlbSAwIDAgcmdiYSgwLCAwLCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgIDAuNWVtIDAgMCByZ2JhKDAsIDAsIDAsIDApO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICA2MCUge1xuICAgICAgICAgICAgICAgICAgICB0ZXh0LXNoYWRvdzpcbiAgICAgICAgICAgICAgICAgICAgICAgIDAuMjVlbSAwIDAgd2hpdGUsXG4gICAgICAgICAgICAgICAgICAgICAgICAwLjVlbSAwIDAgcmdiYSgwLCAwLCAwLCAwKTtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgODAlLFxuICAgICAgICAgICAgICAgIDEwMCUge1xuICAgICAgICAgICAgICAgICAgICB0ZXh0LXNoYWRvdzpcbiAgICAgICAgICAgICAgICAgICAgICAgIDAuMjVlbSAwIDAgd2hpdGUsXG4gICAgICAgICAgICAgICAgICAgICAgICAwLjVlbSAwIDAgd2hpdGU7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfVxuICAgICAgICAiXX0= */</style>
+      <script type="module" crossorigin src="./assets/index-24acfddd.js"></script>
+      <link rel="stylesheet" href="./assets/index-dfd2b4fb.css">
+    </head>
+    <body>
+        <svg
+            id="defs-svg"
+            width="10"
+            height="10"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <defs>
+                <linearGradient
+                    id="menu-icon-gradient-0"
+                    gradientTransform="rotate(90)"
+                >
+                    <stop stop-color="#EDFEFF" />
+                    <stop offset="1" stop-color="#92AAFF" />
+                </linearGradient>
+
+                <linearGradient
+                    id="menu-icon-gradient-1"
+                    gradientTransform="rotate(90)"
+                >
+                    <stop offset="5%" stop-color="#8F7DFF" />
+                    <stop offset="95%" stop-color="#7693FF" />
+                </linearGradient>
+                <linearGradient
+                    id="menu-icon-gradient-2"
+                    gradientTransform="rotate(90)"
+                >
+                    <stop offset="5%" stop-color="#7693FF" />
+                    <stop offset="95%" stop-color="#76CEFF" />
+                </linearGradient>
+
+                <linearGradient
+                    id="menu-icon-gradient-3"
+                    gradientTransform="rotate(90)"
+                >
+                    <stop offset="5%" stop-color="#76CEFF" />
+                    <stop offset="95%" stop-color="#94FCB6" />
+                </linearGradient>
+                <linearGradient
+                    id="menu-icon-gradient-4"
+                    gradientTransform="rotate(90)"
+                >
+                    <stop offset="5%" stop-color="#94FCB6" />
+                    <stop offset="95%" stop-color="#94DBFC" />
+                </linearGradient>
+                <linearGradient
+                    id="menu-icon-gradient-5"
+                    gradientTransform="rotate(90)"
+                >
+                    <stop offset="5%" stop-color="#94FCB6" />
+                    <stop offset="95%" stop-color="#94DBFC" />
+                </linearGradient>
+                <linearGradient
+                    id="menu-icon-gradient-6"
+                    gradientTransform="rotate(90)"
+                >
+                    <stop offset="5%" stop-color="#7693FF" />
+                    <stop offset="95%" stop-color="#76CEFF" />
+                </linearGradient>
+
+                <linearGradient
+                    id="menu-icon-gradient-active"
+                    gradientTransform="rotate(90)"
+                >
+                    <stop stop-color="#7660EA" />
+                    <stop offset="1" stop-color="#60B0EA" />
+                </linearGradient>
+                <linearGradient
+                    id="menu-icon-gradient-green-active"
+                    gradientTransform="rotate(90)"
+                >
+                    <stop stop-color="#94FCB6" />
+                    <stop offset="1" stop-color="#60E2EA" />
+                </linearGradient>
+                <linearGradient
+                    id="menu-icon-gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                >
+                    <stop offset="0%" stop-color="white" stop-opacity="0.2" />
+                    <stop offset="50%" stop-color="white" stop-opacity="0" />
+                    <stop offset="100%" stop-color="white" stop-opacity="0.2" />
+                </linearGradient>
+
+                <filter id="menu-icon-filter">
+                    <feGaussianBlur stdDeviation="2" />
+                </filter>
+            </defs>
+        </svg>
+
+        <div class="siteLoading">
+            <h2 class="siteLoading__loading">LOADING</h2>
+            <h2 class="siteLoading__completed">
+                EMBRACE
+                <br />
+                THE
+                <br />
+                <span>FUTURE</span>
+            </h2>
+        </div>
+        <div id="root"></div>
+        <div id="center-area"></div>
+        
+    </body>
+</html>

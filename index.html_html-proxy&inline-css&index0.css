@@ -1,0 +1,111 @@
+
+            body,
+            html,
+            #root {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden !important;
+            }
+            #defs-svg {
+                position: fixed;
+                z-index: -1;
+            }
+
+            body {
+                background-color: #000;
+            }
+            .siteLoading {
+                overflow: hidden;
+                position: fixed;
+                z-index: 2;
+                width: 200px;
+                text-align: center;
+                font-family: Neusa, Arial, Helvetica, sans-serif;
+                color: #fff;
+                top: 38%;
+                left: 50%;
+                transform: translate(-50%, -38%);
+                pointer-events: none;
+            }
+            .siteLoading h2 {
+                text-align: center;
+                overflow: hidden;
+                width: 100%;
+                font-size: 20px;
+                font-weight: bold;
+                height: 72px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 2px;
+            }
+            .siteLoading h2 span {
+                letter-spacing: 4.8px;
+                margin-right: -2px;
+            }
+            .siteLoading__loading {
+                transform: translate(0) rotate(0);
+                margin-bottom: 0.2rem;
+            }
+
+            .siteLoading:not(.loaded) .siteLoading__loading {
+                animation-delay: 0s;
+                animation-direction: normal;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                animation-name: rotateWipeUpIn;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                transform: translateY(160%) rotate(10deg);
+                position: relative;
+            }
+
+            .siteLoading:not(.loaded) .siteLoading__loading:after {
+                content: ' .';
+                animation: dots 1s steps(5, end) infinite;
+                position: absolute;
+                left: 140px;
+            }
+
+            .siteLoading__completed {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform: translateY(151%);
+            }
+
+            @keyframes rotateWipeUpIn {
+                to {
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes dots {
+                0%,
+                20% {
+                    color: rgba(0, 0, 0, 0);
+                    text-shadow:
+                        0.25em 0 0 rgba(0, 0, 0, 0),
+                        0.5em 0 0 rgba(0, 0, 0, 0);
+                }
+                40% {
+                    color: white;
+                    text-shadow:
+                        0.25em 0 0 rgba(0, 0, 0, 0),
+                        0.5em 0 0 rgba(0, 0, 0, 0);
+                }
+                60% {
+                    text-shadow:
+                        0.25em 0 0 white,
+                        0.5em 0 0 rgba(0, 0, 0, 0);
+                }
+                80%,
+                100% {
+                    text-shadow:
+                        0.25em 0 0 white,
+                        0.5em 0 0 white;
+                }
+            }
+        
